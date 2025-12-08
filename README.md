@@ -12,13 +12,13 @@ All methods should be available at `/api/vCURRENT_VERSION` (E.g. `/api/v1/health
 A username and password should be provided by the server by default. For example, `ft-server-node` uses the `USERNAME` and `PASSWORD` env variables.\
 All requests require authentication and should have the `Authorization` header. It should be formatted like this:
 ```
-Authorization: Basic Base64Encoded(USERNAME:PASSWORD)
+Authorization: Basic Base64Encoded(USERNAME PASSWORD)
 ```
 For example,
 ```
-Authorization: Basic dXNlcjpwYXNzd2Q=
+Authorization: Basic dXNlciBwYXNzd2Q=
 ```
-`dXNlcjpwYXNzd2Q=` is a base64 encoded string that when decoded results in `user:passwd`. `user` is the username and `passwd` is the password, separated by a `:`.
+`dXNlciBwYXNzd2Q=` is a base64 encoded string that when decoded results in `user passwd`. `user` is the username and `passwd` is the password, separated by a space.
 
 ###  `GET /health`
 This endpoint does not require authentication.\
